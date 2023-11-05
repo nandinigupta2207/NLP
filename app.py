@@ -40,7 +40,8 @@ def predict_topic(image):
     return predicted_topic
 
 # Create a Streamlit app
-st.title('Topic Prediction App')
+st.set_page_config(page_title="Invoice - Topic Prediction", page_icon="🍕", layout="wide", initial_sidebar_state="expanded")
+st.markdown("<h1 style='text-align: center; color: orange;'>Using OCR, GoogleTrans and LDA</h1>", unsafe_allow_html=True)
 
 # Input image
 image = st.file_uploader('Choose an image')
