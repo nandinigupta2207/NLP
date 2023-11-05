@@ -20,7 +20,7 @@ def predict_topic(image):
     translator = googletrans.Translator()
     translation = translator.translate(text, dest='en')
 
-    new_text_bow = dictionary.doc2bow(preprocessed_text)
+    new_text_bow = dictionary.doc2bow(translation.text)
 
     # Apply the LDA model
     new_dominant_topic = lda_model[new_text_bow.text]
