@@ -48,5 +48,5 @@ image = st.file_uploader('Choose an image')
 # Predict the topic
 if image:
     topic = predict_topic(image)
-    st.write('Predicted topic:', predicted_topic)
+    st.write('Predicted topic:', topic)
 
