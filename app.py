@@ -20,10 +20,15 @@ def predict_topic(image):
     translation = translator.translate(text, dest='en')
 
     # Apply the LDA model
-    topic = lda_model.predict([translation.text])
+    new_dominant_topic = lda_model[translation.text]
+    dominant_topic = max(new_document_topics, key=lambda x: x[1])
+    dominant_topic_num = dominant_topic[0]
+
+# Get the topic label
+    predicted_topic = topics[dominant_topic_num]
 
     # Return the predicted topic
-    return topic[0]
+    return predicted_topic
 
 # Create a Streamlit app
 st.title('Topic Prediction App')
@@ -34,5 +39,5 @@ image = st.file_uploader('Choose an image')
 # Predict the topic
 if image:
     topic = predict_topic(image)
-    st.write('Predicted topic:', topic)
+    st.write('Predicted topic:', predicted_topic)
 
