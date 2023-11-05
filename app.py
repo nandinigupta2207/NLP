@@ -3,6 +3,10 @@ import pytesseract
 from PIL import Image
 import googletrans
 
+# Load the LDA model
+with open('load_model.pkl', 'rb') as f:
+    lda_model = pickle.load(f)
+
 def predict_topic(image):
     # Read the image
     img = Image.open(image)
