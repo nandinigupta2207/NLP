@@ -1,4 +1,9 @@
 import streamlit as st
+!apt-get install tesseract-ocr
+!apt-get install tesseract-ocr-all
+import os
+# Set the TESSDATA_PREFIX environment variable
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/4.00/tessdata'
 import pytesseract
 from PIL import Image
 import googletrans
