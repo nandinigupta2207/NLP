@@ -1,5 +1,4 @@
 import streamlit as st
-import tesseract
 import pytesseract
 from PIL import Image
 import googletrans
