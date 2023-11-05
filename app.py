@@ -6,9 +6,8 @@ import pickle
 from gensim import corpora 
 
 from gensim.corpora import Dictionary
-
-# Assuming you have saved the dictionary as 'my_dictionary.dict' in the same directory
-
+# Load the dictionary from the uploaded file
+dictionary = Dictionary.load('my_dictionary.dict')
 
 # Load the LDA model
 with open('lda_model.pkl', 'rb') as f:
