@@ -34,6 +34,13 @@ def predict_topic(image):
     dominant_topic_num = dominant_topic[0]
 
 # Get the topic label
+    topics = {
+    0: 'Cafe',
+    1: 'Hotel',
+    2: 'Transport',
+    3: 'Retail',
+    4: 'Tourist Attraction',
+    5:'Miscellaneous'}
     predicted_topic = topics[dominant_topic_num]
 
     # Return the predicted topic
