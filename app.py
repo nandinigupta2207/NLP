@@ -4,7 +4,7 @@ from PIL import Image
 import googletrans
 
 # Load the LDA model
-with open('load_model.pkl', 'rb') as f:
+with open('lda_model.pkl', 'rb') as f:
     lda_model = pickle.load(f)
 
 def predict_topic(image):
