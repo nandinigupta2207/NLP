@@ -1,3 +1,5 @@
+opencv-python
+streamlit
 pillow==8.3.1
 tesseract
 pytesseract==0.3.8
