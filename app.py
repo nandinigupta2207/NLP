@@ -25,7 +25,7 @@ def predict_topic(image):
     translation = translator.translate(text, dest='en')
     unicode_array = [ord(char) for char in translation.text]
 
-    new_text_bow = dictionary.doc2bow(unicode_array.text)
+    new_text_bow = dictionary.doc2bow(unicode_array)
 
     # Apply the LDA model
     new_dominant_topic = lda_model[new_text_bow.text]
