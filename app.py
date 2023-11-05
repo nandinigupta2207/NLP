@@ -3,6 +3,7 @@ import pytesseract
 from PIL import Image
 import googletrans
 import pickle
+from gensim import corpora 
 
 # Load the LDA model
 with open('lda_model.pkl', 'rb') as f:
