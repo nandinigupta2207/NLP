@@ -29,7 +29,7 @@ def predict_topic(image):
     new_text_bow = dictionary.doc2bow(translated_text)
 
     # Apply the LDA model
-    new_dominant_topic = lda_model[new_text_bow]
+    new_document_topics = lda_model[new_text_bow]
     dominant_topic = max(new_document_topics, key=lambda x: x[1])
     dominant_topic_num = dominant_topic[0]
 
