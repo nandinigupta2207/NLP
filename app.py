@@ -5,6 +5,11 @@ import googletrans
 import pickle
 from gensim import corpora 
 
+from gensim.corpora import Dictionary
+
+# Assuming you have saved the dictionary as 'my_dictionary.dict' in the same directory
+dictionary = Dictionary.load('dictionary')
+
 # Load the LDA model
 with open('lda_model.pkl', 'rb') as f:
     lda_model = pickle.load(f)
